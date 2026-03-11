@@ -260,7 +260,7 @@ nav a:hover { color: var(--white); }
 }
 .sp-glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
 .sp-eye { font-size: 11px; letter-spacing: 3px; color: var(--gray); text-transform: uppercase; margin-bottom: 24px; }
-.sp-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 9vw, 128px); line-height: 0.9; letter-spacing: 1px; margin-bottom: 28px; position: relative; z-index: 1; }
+.sp-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 9vw, 128px); line-height: 0.9; letter-spacing: 1px; margin-bottom: 28px; position: relative; z-index: 1; }
 .sp-sub { font-size: 15px; color: var(--gray); max-width: 500px; margin: 0 auto 48px; line-height: 1.7; }
 .sp-cta { display: flex; justify-content: center; gap: 14px; position: relative; z-index: 1; }
 
@@ -428,10 +428,11 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
 
     /* Titles */
     .big-title { font-size: 12vw; }
-    .sp-title { font-size: 12vw; text-align: left; }
-    .special { text-align: left; }
-    .sp-eye { text-align: left; }
-    .sp-sub { text-align: left; margin: 0 0 32px; }
+    .special { text-align: left !important; padding-left: 20px !important; padding-right: 20px !important; }
+    .sp-title { font-size: min(8vw, 44px) !important; text-align: left !important; word-break: keep-all; white-space: normal; }
+    .sp-eye { text-align: left !important; }
+    .sp-sub { text-align: left !important; margin: 0 0 28px; }
+    .sp-glow { display: none; }
     .sp-cta { flex-direction: column; align-items: stretch; gap: 10px; }
     .sp-cta .btn-pill, .sp-cta .btn-ghost { width: 100%; justify-content: center; }
     .form-title { font-size: 11vw; }
