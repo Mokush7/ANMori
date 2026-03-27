@@ -488,6 +488,20 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
     .fb a { width: 46px; height: 46px; }
     .fb a img { width: 46px; height: 46px; }
   }
+  @media (max-width: 768px) {
+  .srv-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .srv-col {
+    display: contents;
+  }
+  .srv-col:first-child .sc:first-child { order: 1; } /* 01 */
+  .srv-col:last-child .sc:first-child  { order: 2; } /* 02 */
+  .srv-col:first-child .sc:last-child  { order: 3; } /* 03 */
+  .srv-col:last-child .sc:nth-child(2) { order: 4; } /* 04 */
+  .srv-col:last-child .sc:last-child   { order: 5; } /* 05 */
+}
 </style>
 </head>
 <body>
