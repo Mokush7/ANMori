@@ -502,6 +502,49 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
   .srv-col:last-child .sc:nth-child(2) { order: 4; } /* 04 */
   .srv-col:last-child .sc:last-child   { order: 5; } /* 05 */
 }
+  /* FOUNDERS */
+.founders-sec { padding: 80px 48px 120px; border-top: 1px solid var(--border); }
+.founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+.founder-card {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: 24px; padding: 40px;
+  display: flex; flex-direction: column; gap: 20px;
+  transition: border-color .3s, transform .3s;
+}
+.founder-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); }
+.founder-header { display: flex; gap: 20px; align-items: flex-start; }
+.founder-avatar {
+  width: 60px; height: 60px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(176,196,222,0.3), rgba(176,196,222,0.08));
+  border: 1px solid rgba(176,196,222,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: var(--yellow); letter-spacing: 1px;
+}
+.founder-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 4px; }
+.founder-role { font-size: 12px; color: var(--yellow); font-weight: 600; margin-bottom: 4px; }
+.founder-spec { font-size: 12px; color: var(--gray); }
+.founder-bio { font-size: 14px; color: var(--gray); line-height: 1.8; }
+.founder-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.founder-tags span {
+  font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+  padding: 5px 12px; border-radius: 50px;
+}
+.founder-expertise { }
+.fe-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 12px; }
+.founder-expertise ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.founder-expertise ul li { font-size: 13px; color: var(--gray); padding-left: 16px; position: relative; }
+.founder-expertise ul li::before { content: '—'; position: absolute; left: 0; color: var(--yellow); }
+.founder-quote {
+  font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7;
+  border-left: 2px solid var(--yellow); padding-left: 16px;
+  font-style: italic; margin-top: auto;
+}
+@media(max-width:768px){
+  .founders-sec { padding: 48px 20px 60px; }
+  .founders-grid { grid-template-columns: 1fr; }
+  .founder-card { padding: 28px; }
+}
 </style>
 </head>
 <body>
@@ -578,7 +621,76 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
     </div>
   </div>
 </section>
+<!-- FOUNDERS -->
+<section class="founders-sec" id="founders">
+  <div class="big-title rv">ОСНОВАТЕЛИ</div>
+  <div class="founders-grid">
 
+    <!-- Анатолий -->
+    <div class="founder-card rv">
+      <div class="founder-header">
+        <div class="founder-avatar">АМ</div>
+        <div>
+          <div class="founder-name">АНАТОЛИЙ МОРИ</div>
+          <div class="founder-role">Сооснователь ANMORI Agency</div>
+          <div class="founder-spec">Performance-маркетолог | Бизнес-аналитик</div>
+        </div>
+      </div>
+      <p class="founder-bio">Большинство рекламных кампаний сливают бюджет не потому, что реклама плохая. А потому что никто не видит бизнес целиком.</p>
+      <p class="founder-bio">За плечами Анатолия более 10 лет опыта в аналитике, управлении проектами и построении бизнес-систем. Его подход объединяет маркетинг, аналитику и стратегию роста.</p>
+      <div class="founder-tags">
+        <span>Meta Ads</span><span>Аналитика данных</span><span>A/B-тестирование</span><span>SQL</span><span>CRM</span>
+      </div>
+      <div class="founder-expertise">
+        <div class="fe-title">Отвечает за:</div>
+        <ul>
+          <li>Разработку рекламных стратегий</li>
+          <li>Запуск и масштабирование рекламы в Meta Ads</li>
+          <li>Аналитику и прогнозирование результатов</li>
+          <li>Построение маркетинговых воронок</li>
+          <li>Интеграцию CRM и автоматизацию процессов</li>
+        </ul>
+      </div>
+      <div class="founder-stats">
+        <div><div class="stat-n">10+</div><div class="stat-l">лет в аналитике</div></div>
+        <div><div class="stat-n">50+</div><div class="stat-l">проектов в digital</div></div>
+      </div>
+      <blockquote class="founder-quote">«Реклама должна быть частью системы роста бизнеса, а не просто источником трафика»</blockquote>
+    </div>
+
+    <!-- Кристина -->
+    <div class="founder-card rv">
+      <div class="founder-header">
+        <div class="founder-avatar">КМ</div>
+        <div>
+          <div class="founder-name">КРИСТИНА МОРИ</div>
+          <div class="founder-role">Сооснователь ANMORI Agency</div>
+          <div class="founder-spec">Контент-стратег | Специалист по позиционированию</div>
+        </div>
+      </div>
+      <p class="founder-bio">Более 5 лет помогает экспертам и бизнесу превращать знания, продукты и услуги в понятные маркетинговые системы, которые привлекают клиентов через контент и доверие.</p>
+      <p class="founder-bio">Работала с проектами в сфере психологии, образования, йоги, туризма, медицины, ресторанного бизнеса. Среди клиентов — предприниматели из Испании, США, ОАЭ, Казахстана и России.</p>
+      <div class="founder-tags">
+        <span>Контент-стратегия</span><span>Позиционирование</span><span>Упаковка бренда</span><span>SMM</span>
+      </div>
+      <div class="founder-expertise">
+        <div class="fe-title">Отвечает за:</div>
+        <ul>
+          <li>Стратегию и позиционирование</li>
+          <li>Контент-маркетинг и упаковку брендов</li>
+          <li>Клиентский опыт</li>
+          <li>Запуск проектов через социальные сети</li>
+        </ul>
+      </div>
+      <div class="founder-stats">
+        <div><div class="stat-n">5+</div><div class="stat-l">лет в маркетинге</div></div>
+        <div><div class="stat-n">20+</div><div class="stat-l">проектов в нишах</div></div>
+      </div>
+      <blockquote class="founder-quote">«Люди покупают не контент. Они покупают доверие. А доверие начинается с правильно рассказанной истории»</blockquote>
+    </div>
+
+  </div>
+</section>
 <!-- SERVICES -->
 <section class="services-sec" id="services">
   <div class="srv-header">
