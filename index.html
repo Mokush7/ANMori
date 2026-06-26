@@ -575,6 +575,38 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
   .reviews-grid { grid-template-columns: 1fr; }
   .review-card { padding: 24px; }
 }
+  /* TEAM */
+.team-sec { padding: 80px 48px 120px; border-top: 1px solid var(--border); }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.team-card {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: 20px; overflow: hidden;
+  transition: border-color .3s, transform .3s;
+  text-align: center;
+}
+.team-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); }
+.team-photo {
+  width: 100%; aspect-ratio: 1/1; overflow: hidden;
+}
+.team-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center top;
+  transition: transform .5s ease;
+}
+.team-card:hover .team-photo img { transform: scale(1.04); }
+.team-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; letter-spacing: 1px;
+  color: var(--white); padding: 20px 20px 4px;
+}
+.team-role {
+  font-size: 12px; color: var(--yellow);
+  font-weight: 600; padding: 0 20px 24px;
+}
+@media(max-width:768px){
+  .team-sec { padding: 48px 20px 60px; }
+  .team-grid { grid-template-columns: 1fr; gap: 16px; }
+}
 </style>
 </head>
 <body>
@@ -717,6 +749,31 @@ body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:
         <div><div class="stat-n">20+</div><div class="stat-l">проектов в нишах</div></div>
       </div>
       <blockquote class="founder-quote">«Люди покупают не контент. Они покупают доверие. А доверие начинается с правильно рассказанной истории»</blockquote>
+    </div>
+
+  </div>
+</section>
+  <!-- TEAM -->
+<section class="team-sec" id="team">
+  <div class="big-title rv">КОМАНДА</div>
+  <div class="team-grid">
+
+    <div class="team-card rv">
+      <div class="team-photo"><img src="vladislava.JPG" alt="Владислава"></div>
+      <div class="team-name">ВЛАДИСЛАВА</div>
+      <div class="team-role">Директор по контенту</div>
+    </div>
+
+    <div class="team-card rv">
+      <div class="team-photo"><img src="vlad.PNG" alt="Влад"></div>
+      <div class="team-name">ВЛАД</div>
+      <div class="team-role">Директор по дизайну</div>
+    </div>
+
+    <div class="team-card rv">
+      <div class="team-photo"><img src="viktoria.JPG" alt="Виктория"></div>
+      <div class="team-name">ВИКТОРИЯ</div>
+      <div class="team-role">Графический дизайнер</div>
     </div>
 
   </div>
